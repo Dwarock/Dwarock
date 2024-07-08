@@ -1,5 +1,5 @@
 name : automate to add test file
-on : 
+'on' : 
   push : 
     branches : 
     - main

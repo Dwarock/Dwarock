@@ -1,4 +1,4 @@
-name : automate to add test file
+name: addingFile
 on:
   push:
     branches:

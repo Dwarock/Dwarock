@@ -1,0 +1,19 @@
+name : automate to add test file
+on : 
+  push : 
+    branches : 
+    - main
+    - Dev1
+jobs : 
+ my-job: 
+   name: automate to add file
+   runs-on: ubuntu-latest
+
+  steps:
+    - uses: actions/checkout@v3
+    - name: Add another repository as a remote
+      run: git add dev2 
+           git add notepad.txt
+           
+    
+ 

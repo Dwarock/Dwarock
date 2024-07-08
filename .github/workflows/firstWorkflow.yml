@@ -4,7 +4,7 @@ on :
     branches : 
     - main
     - Dev1
-jobs : 
+jobs: 
  my-job: 
    name: automate to add file
    runs-on: ubuntu-latest

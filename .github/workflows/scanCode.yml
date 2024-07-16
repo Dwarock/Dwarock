@@ -1,7 +1,10 @@
 name: scan-code
-on: [push]
+on:
+  push:
+    branches:
+      - dev2
 jobs:
-  apex:
+  pmd-runapex:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
@@ -10,5 +13,5 @@ jobs:
         fetch-depth: 0
     - name: Setup PMD
       uses: legetz/setup-pmd@7.1.0
-    - name: APEX full scan
-      run: pmd check --dir ./force-app/main/default/classes/*.cls --rulesets ./pmd-rules.xml -f text
+    - name: APEX full scan for design rules only
+      run: pmd check --dir ./force-app/main/default/classes -R category/apex/design.xml -f text

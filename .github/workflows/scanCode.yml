@@ -2,7 +2,7 @@ name: scan-code
 on:
   push:
     branches:
-      - dev2
+      -dev2
 jobs:
   pmd-runapex:
     runs-on: ubuntu-latest
